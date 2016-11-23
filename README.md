@@ -1,7 +1,8 @@
 # FMDB-ORM
 基于FMDB扩展的OC数据库ORM框架
 参照j2ee中mybatis框架基于fmdb框架扩展的oc数据库orm框架,公司目前使用(几十万级别本地数据处理)，由于fmdb机制本身的缺陷，对sqlite3性能利用没达到极致。可看我另外一个全新ios读写分离数据库框架
-｀｀｀
+｀｀｀  
+
 #define DBVERSION 5
 @interface MDDBManager : FMDBManager
 + (MDDBManager*)shareInstance:(NSString*)filename;
@@ -59,8 +60,10 @@ static MDDBManager *singleInstance = nil;
 @end
 
 
-｀｀｀
-｀｀｀
+｀｀｀  
+
+｀｀｀  
+
 - (NSMutableArray *)queryGroupArticleListByGroupId:(long)groupId
 {
     __block NSMutableArray *articleList =[NSMutableArray array];
@@ -95,5 +98,6 @@ static MDDBManager *singleInstance = nil;
     return patient;
     
 }
-
+  
+  
 ｀｀｀
